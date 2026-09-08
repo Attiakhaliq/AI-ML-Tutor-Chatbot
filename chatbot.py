@@ -1,9 +1,12 @@
 
+import os 
+
 from huggingface_hub import InferenceClient 
 
 class Chatbot:
     def __init__(self):
-        self.client = InferenceClient(provider="auto")
+        self.client = InferenceClient(provider="auto",
+          api_key=os.getenv("HF_TOKEN"))
 
         self.messages = [
             {

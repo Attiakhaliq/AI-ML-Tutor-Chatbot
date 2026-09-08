@@ -42,7 +42,7 @@ if user_message:
 
    
 try:
-    response = requests.post("http://127.0.0.1:8000/chat", json={"message": user_message},
+    response = requests.post("https://ai-ml-tutor-chatbot.onrender.com/chat", json={"message": user_message},
                              timeout=60)
 
     response.raise_for_status()
